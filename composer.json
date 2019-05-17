@@ -1,0 +1,19 @@
+{
+    "name": "awsome-kill/php-spreadsheet-helper",
+    "description": "created for easier and more efficiently import and export",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lam",
+            "email": "934293138@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "phpSpreadsheetHelper\\":"./src/phpSpreadsheet"
+        }
+    }
+}
