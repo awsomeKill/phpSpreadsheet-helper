@@ -12,10 +12,7 @@ use PhpOffice\PhpSpreadsheet\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
 class SHelper{
-    /**
-     * @var object Cached PhpSpreadsheet object
-     */
-    private static $_objSpreadsheet;
+
 
     /**
      * @var object Cached PhpSpreadsheet Sheet object
@@ -50,14 +47,38 @@ class SHelper{
     /**
      * @var array Extensions for write
      */
-    private static $_writeExtensions = [
-        'OASIS' => '.ods',
-        'Excel2007' => '.xlsx',
-        'Excel97' => '.xls',
-        'HTML' => '.html',
-        'CSV' => '.csv',
-        'PDF' => '.pdf'
+    protected $_writeExtensions = [
+        'OASIS' => [
+            'extension' => '.ods',
+            'contentType' => 'application/vnd.oasis.opendocument.spreadsheet'
+        ],
+        'XLSX' =>[
+            'extension'=>'.xls',
+            'contentType'=> 'application/vnd.ms-excel'
+        ],
+        'XLS' => [
+            'extension' => '.xls',
+            'contentType' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ],
+        'HTML' => [
+            'extension' => '.html',
+            'contentType' => 'text/html'
+        ],
+        'CSV' => [
+            'extension' => '.csv',
+            'contentType' => 'text/csv'
+        ],
+        'PDF' => [
+            'extension' => '.pdf',
+            'contentType' => 'text/pdf'
+        ]
     ];
+
+    /**
+     * 初始化
+     */
+    public function initialize()
+    {}
 
 
     public static function make($action = '')
@@ -73,7 +94,6 @@ class SHelper{
         if (!class_exists($class)) {
             throw new Exception($action . '构建器不存在', 8002);
         }
-
         return new $class;
     }
 
@@ -82,5 +102,7 @@ class SHelper{
         self::$_offsetRow = 0;
         self::$_offsetCol = 0; // A1 => 1
     }
+
+
 
 }
