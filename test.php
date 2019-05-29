@@ -10,20 +10,18 @@ require_once  __DIR__.'/vendor/autoload.php';
 
 use phpSpreadsheetHelper\SHelper;
 
+$file_path = __DIR__.'/list1.xls';
 
-$data=[
-    ['name'=>'羊肉串','num'=>'14','category'=>'烧烤','price'=>'3/10'],
-    ['name'=>'蔬菜沙拉','num'=>'28','category'=>'凉菜','price'=>'15'],
-    ['name'=>'牛肉串','num'=>'50','category'=>'烧烤','price'=>'9'],
-    ['name'=>'酸奶','num'=>'20','price'=>'3.5','category'=>'奶制品']
-];
-
- return SHelper::make('write')
-     ->addHeader([
-         ['name',20,'商品名称'],
-         ['num',15,'数量'],
-         ['category',20,'分类'],
-         ['price',15,'售价']
-     ])
-     ->setData($data)
-     ->output('商品表','xlsx');
+$list =  SHelper::make('read')
+    ->addFile($file_path)
+    ->setHeader([
+        ['product_name','商品名称'],
+        ['unit_name','单位'],
+        ['category_name','商品分类'],
+        ['price','价格'],
+        ['cost_price','成本价'],
+        ['bar_code','商品条码'],
+        ['stock','库存']
+    ])
+    ->output();
+  var_dump($list);die;

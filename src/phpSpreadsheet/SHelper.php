@@ -53,7 +53,7 @@ class SHelper{
             'contentType' => 'application/vnd.oasis.opendocument.spreadsheet'
         ],
         'XLSX' =>[
-            'extension'=>'.xls',
+            'extension'=>'.xlsx',
             'contentType'=> 'application/vnd.ms-excel'
         ],
         'XLS' => [
@@ -97,11 +97,7 @@ class SHelper{
         return new $class;
     }
 
-    public static function resetSpread(){
-        self::$_objSheet = NULL;
-        self::$_offsetRow = 0;
-        self::$_offsetCol = 0; // A1 => 1
-    }
+
 
 
 

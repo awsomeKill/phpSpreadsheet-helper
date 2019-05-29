@@ -10,6 +10,7 @@ namespace phpSpreadsheetHelper\write;
 
 use PhpOffice\PhpSpreadsheet\Cell\DataType;
 use PhpOffice\PhpSpreadsheet\Exception;
+use PhpOffice\PhpSpreadsheet\Style\Alignment;
 use phpSpreadsheetHelper\SHelper;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
@@ -22,70 +23,88 @@ class Helper extends SHelper
      */
     private $_objSpreadsheet;
     /**
-     * @var  object Cached Sheet object
+     * @var object Cached Sheet object
      */
     private $_objSheet;
     /**
-     * @var array Cached Sheet header
+     * @var string Offset of Column
      */
-    private $expCellName;
+    private $_columnOffset;
     /**
-     * @var integer Maximum column number of header
+     * @var string max offset of Column
      */
-    private $cellNum;
-
+    private $_columnMaxOffset;
     /**
-     * @var array title of
+     * @var string Offset of data
      */
-    private  $cellName = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','AA','AB','AC','AD','AE','AF','AG','AH','AI','AJ','AK','AL','AM','AN','AO','AP','AQ','AR','AS','AT','AU','AV','AW','AX','AY','AZ','BA','BB','BC','BD','BE','BF','BG','BH','BI','BJ','BK','BL','BM','BN','BO','BP','BQ','BR','BS','BT','BU','BV','BW','BX','BY','BZ','CA','CB','CC','CD','CE','CF','CG','CH','CI','CJ','CK','CL','CM','CN','CO','CP','CQ','CR','CS','CT','CU','CV','CW','CX','CY','CZ','DA','DB','DC','DD','DE','DF','DG','DH','DI','DJ','DK','DL','DM','DN','DO','DP','DQ','DR','DS','DT','DU','DV','DW','DX','DY','DZ','EA','EB','EC','ED','EE','EF','EG','EH','EI','EJ','EK','EL','EM','EN','EO','EP','EQ','ER','ES','ET','EU','EV','EW','EX','EY','EZ','FA','FB','FC','FD','FE','FF','FG','FH','FI','FJ','FK','FL','FM','FN','FO','FP','FQ','FR','FS','FT','FU','FV','FW','FX','FY','FZ','GA','GB','GC','GD','GE','GF','GG','GH','GI','GJ','GK','GL','GM','GN','GO','GP','GQ','GR','GS','GT','GU','GV','GW','GX','GY','GZ','HA','HB','HC','HD','HE','HF','HG','HH','HI','HJ','HK','HL','HM','HN','HO','HP','HQ','HR','HS','HT','HU','HV','HW','HX','HY','HZ'];
+    private $_dataOffset;
+    /**
+     * @var array Combined Data
+     */
+    private $_var = [
+        'title'  =>  '',
+        'header' =>  [] ,
+        'data'  =>  [] ,
+    ];
 
 
     public function __construct()
     {
         $this->_objSpreadsheet = new Spreadsheet();
         $this->_objSheet = $this->_objSpreadsheet->getActiveSheet();
+        $this->_columnMaxOffset = $this->getMaximumColumn();
     }
 
-
+    /**
+     * @param $header
+     * @return $this
+     * @throws Exception
+     */
     public function addHeader($header){
-        $this->cellNum  = count($header);
-        $this->expCellName = $header;
-        for($i=0;$i<$this->cellNum;$i++){
-            $this->_objSheet->setCellValue($this->cellName[$i].'1', $this->expCellName[$i][2]);
-            //根据内容设置单元格宽度
-            $cellWidth = $this->expCellName[$i][1] == 'auto' ? strlen($this->expCellName[$i][2]) : $this->expCellName[$i][1];
-            $this->_objSheet->getColumnDimension($this->cellName[$i])->setWidth($cellWidth);
-
-            $this->_objSheet->getStyle($this->cellName[$i])->getNumberFormat()->setFormatCode(NumberFormat::FORMAT_TEXT);
-            if(isset($expCellName[$i][3])) {
-                switch ($expCellName[$i][3]) {
-                    case 'FORMAT_NUMBER':
-                        $this->_objSheet->getStyle($this->cellName[$i])->getNumberFormat()->setFormatCode(NumberFormat::FORMAT_NUMBER);
-                        break;
-                    case 'FORMAT_TEXT':
-                        $this->_objSheet->getStyle($this->cellName[$i])->getNumberFormat()->setFormatCode(NumberFormat::FORMAT_TEXT);
-                        break;
-                }
+        if(empty($header)){
+            throw new Exception('请填写表头信息');
+        }
+        for($i=0;$i<count($header);$i++){
+            $v = $header[$i];
+            $this->_var['header'][] = [
+                'key' => $v[0],
+                'width' => is_numeric($v[1])?$v[1]:'auto',
+                'name' => $v[2],
+                'format' => isset($v[3])?$v[3]:'default',  //格式
+            ];
+            if($i+1<count($header)){
+                $this->_columnMaxOffset++;
             }
         }
         return $this;
     }
 
+    private function setColumnWidth($value,$length){
+        $cellWidth = $length == 'auto' ? strlen($value) : $length;
+        $this->_objSheet->getColumnDimension($this->getMaximumColumn())->setWidth($cellWidth);
+        return $this;
+    }
+
+    public function getMaximumColumn(){
+        return $this->_objSheet->getHighestColumn();
+    }
+
+    public function getMaximumRow(){
+        return $this->_objSheet->getHighestRow();
+    }
+
     public function setData($expTableData){
-        $dataNum  = count($expTableData);
-        for($i=0;$i<$dataNum;$i++){
-            for($j=0;$j<$this->cellNum;$j++){
-                if (isset($expTableData[$i][$this->expCellName[$j][0]])) {
-                    if (isset($this->expCellName[$j][3]) && $this->expCellName[$j][3] == 'FORMAT_TEXT') {
-                        $this->_objSheet->setCellValueExplicit($this->cellName[$j].($i+2), " ".$expTableData[$i][$this->expCellName[$j][0]], DataType::TYPE_STRING);
-                    } elseif (isset($this->expCellName[$j][3]) && $this->expCellName[$j][3] == 'FORMAT_NUMBER'){
-                        $this->_objSheet->setCellValueExplicit($this->cellName[$j].($i+2), " ".$expTableData[$i][$this->expCellName[$j][0]], DataType::TYPE_NUMERIC);
-                    }else {
-                        $this->_objSheet->setCellValueExplicit($this->cellName[$j].($i+2), " ".$expTableData[$i][$this->expCellName[$j][0]], DataType::TYPE_STRING);
-                    }
-                }
-            }
+        if(empty($expTableData)||!is_array($expTableData)){
+            return $this;
         }
+        foreach ($expTableData as $v){
+            $this->_var['data'][] = $v;
+        }
+        return $this;
+    }
+
+    public function addTitle($title){
+        $this->_var['title'] = $title;
         return $this;
     }
 
@@ -94,21 +113,73 @@ class Helper extends SHelper
         if(empty($extension)||!isset($this->_writeExtensions[strtoupper($extension)])){
             throw new Exception('缺少文件格式');
         }
-        $extension = $this->_writeExtensions[strtoupper($extension)]['extension'];
-        $contentType = $this->_writeExtensions[strtoupper($extension)]['contentType'];
-        //下载
+        $this->combination();
+        $_extension = $this->_writeExtensions[strtoupper($extension)]['extension'];
+        $_contentType = $this->_writeExtensions[strtoupper($extension)]['contentType'];
         header("Pragma: public");
         header("Expires: 0");
         header("Cache-Control:must-revalidate, post-check=0, pre-check=0");
         header("Content-Type:application/force-download");
-        header("Content-Type:".$contentType);
+        header("Content-Type:".$_contentType);
         header("Content-Type:application/octet-stream");
         header("Content-Type:application/download");
-        header('Content-Disposition:attachment;filename='.$filename.$extension);
+        header('Content-Disposition:attachment;filename='.$filename.$_extension);
         header("Content-Transfer-Encoding:binary");
         header("Pragma: no-cache");
         $objWriter = new Xlsx($this->_objSpreadsheet);
         $objWriter->save('php://output');
         exit();
+    }
+
+    public function combination(){
+        if(!empty($this->_var['title'])){
+            $this->_objSheet->mergeCells('A1:'.$this->_columnMaxOffset.'1');
+            $this->_objSheet->setCellValue('A1', $this->_var['title']);
+            $this->_objSheet->getStyle('A1')->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
+        }
+
+        $this->_columnOffset = $this->getMaximumColumn();
+        $this->_dataOffset = $this->getMaximumRow();
+        $this->_dataOffset++;
+        for($i=0;$i<count($this->_var['header']);$i++){
+            $this->_objSheet->setCellValue($this->_columnOffset.$this->_dataOffset, $this->_var['header'][$i]['name']);
+            //设置单元格宽度
+            $this->setColumnWidth($this->_var['header'][$i]['name'],$this->_var['header'][$i]['width']);
+            //文本格式
+            $this->setCellsType($this->_columnOffset,$this->_var['header'][$i]['format']);
+            $this->_columnOffset++;
+        }
+        for($i=0;$i<count($this->_var['data']);$i++){
+            $currentRowData = $this->_var['data'][$i];
+            $__dataOffset= $this->_dataOffset+1+$i;
+            $_currOffset = 0;
+            for($col='A';$col != $this->_columnOffset;$col++){
+                if (isset($currentRowData[$this->_var['header'][$_currOffset]['key']])) {
+                    if (isset($this->_var['header'][$_currOffset]['format']) && $this->_var['header'][$_currOffset]['format'] == 'FORMAT_TEXT') {
+                        $this->_objSheet->setCellValueExplicit($col.$__dataOffset, " ".$currentRowData[$this->_var['header'][$_currOffset]['key']], DataType::TYPE_STRING);
+                    } elseif (isset($this->_var['header'][$_currOffset]['format']) && $this->_var['header'][$_currOffset]['format'] == 'FORMAT_NUMBER'){
+                        $this->_objSheet->setCellValueExplicit($col.$__dataOffset, " ".$currentRowData[$this->_var['header'][$_currOffset]['key']], DataType::TYPE_NUMERIC);
+                    }else {
+                        $this->_objSheet->setCellValueExplicit($col.$__dataOffset, " ".$currentRowData[$this->_var['header'][$_currOffset]['key']], DataType::TYPE_STRING);
+                    }
+                }
+                $_currOffset++;
+            }
+        }
+        return $this;
+    }
+
+    public function setCellsType($cell,$format){
+        switch ($format) {
+            case 'FORMAT_NUMBER':
+                $this->_objSheet->getStyle($cell)->getNumberFormat()->setFormatCode(NumberFormat::FORMAT_NUMBER);
+                break;
+            case 'FORMAT_TEXT':
+                $this->_objSheet->getStyle($cell)->getNumberFormat()->setFormatCode(NumberFormat::FORMAT_TEXT);
+                break;
+            default:
+                $this->_objSheet->getStyle($cell)->getNumberFormat()->setFormatCode(NumberFormat::FORMAT_TEXT);
+                break;
+        }
     }
 }
