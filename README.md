@@ -1,6 +1,11 @@
 # phpSpreadsheet-helper
 Created for easier import and export
 
+Run Composer in your project:
+
+      composer require awsome-kill/php-spreadsheet-helper
+
+
 
 ### Export Key-value pair array
 
