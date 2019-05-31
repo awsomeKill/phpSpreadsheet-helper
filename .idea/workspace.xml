@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00825ff6-a398-456d-a1fe-407e4c807c80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/baseExport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/export.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/baseImport.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/phpSpreadsheet/SHelper.php" afterPath="$PROJECT_DIR$/src/phpSpreadsheet/SHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/phpSpreadsheet/read/Helper.php" afterPath="$PROJECT_DIR$/src/phpSpreadsheet/read/Helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/phpSpreadsheet/write/Helper.php" afterPath="$PROJECT_DIR$/src/phpSpreadsheet/write/Helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/baseExport.php" afterPath="$PROJECT_DIR$/demo/baseExport.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,14 +19,62 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.php">
+      <file leaf-file-name="baseImport.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/baseImport.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-              <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="275">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baseExport.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/baseExport.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="425">
+                <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="export.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/img/export.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/markbaker/matrix/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -34,7 +82,7 @@
       <file leaf-file-name="SHelper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/phpSpreadsheet/SHelper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
+            <state relative-caret-position="2200">
               <caret line="94" column="58" lean-forward="false" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
               <folding>
                 <element signature="e#6#94#0#PHP" expanded="true" />
@@ -47,8 +95,8 @@
       <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/phpSpreadsheet/read/Helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="127" column="115" lean-forward="true" selection-start-line="127" selection-start-column="115" selection-end-line="127" selection-end-column="115" />
+            <state relative-caret-position="2950">
+              <caret line="127" column="115" lean-forward="false" selection-start-line="127" selection-start-column="115" selection-end-line="127" selection-end-column="115" />
               <folding>
                 <element signature="e#134#179#0#PHP" expanded="true" />
               </folding>
@@ -56,74 +104,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Coordinate.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Cell/Coordinate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="303" column="48" lean-forward="false" selection-start-line="303" selection-start-column="27" selection-end-line="303" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IReader.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/IReader.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Worksheet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Worksheet/Worksheet.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42175">
-              <caret line="1708" column="98" lean-forward="false" selection-start-line="1708" selection-start-column="98" selection-end-line="1708" selection-end-column="98" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/phpSpreadsheet/write/Helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
+            <state relative-caret-position="4050">
               <caret line="173" column="31" lean-forward="false" selection-start-line="173" selection-start-column="18" selection-end-line="173" selection-end-column="31" />
               <folding>
                 <element signature="e#135#178#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Xlsx.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Writer/Xlsx.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2325">
-              <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Exception.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Exception.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spreadsheet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Spreadsheet.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11625">
-              <caret line="468" column="20" lean-forward="false" selection-start-line="468" selection-start-column="20" selection-end-line="468" selection-end-column="20" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -150,9 +138,11 @@
         <option value="$PROJECT_DIR$/src/phpSpreadsheet/write/Builder.php" />
         <option value="$PROJECT_DIR$/src/phpSpreadsheet/Helper.php" />
         <option value="$PROJECT_DIR$/src/phpSpreadsheet/SHelper.php" />
-        <option value="$PROJECT_DIR$/demo/baseExport.php" />
         <option value="$PROJECT_DIR$/src/phpSpreadsheet/write/Helper.php" />
         <option value="$PROJECT_DIR$/src/phpSpreadsheet/read/Helper.php" />
+        <option value="$PROJECT_DIR$/demo/baseExport.php" />
+        <option value="$PROJECT_DIR$/demo/baseImport.php" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test.php" />
       </list>
     </option>
@@ -185,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -207,11 +198,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uploads" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -225,40 +212,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpSpreadsheet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpSpreadsheet-helper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpSpreadsheet-helper" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpSpreadsheet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="write" />
+              <option name="myItemId" value="demo" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,13 +226,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../nmp" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\work\phpSpreadsheet-helper" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\phpSpreadsheet-helper\img" />
       <recent name="D:\work\phpSpreadsheet-helper" />
       <recent name="D:\work\phpSpreadsheet-helper\src\phpSpreadsheet\write" />
       <recent name="D:\work\phpSpreadsheet-helper\src\phpSpreadsheet\read" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\phpSpreadsheet-helper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -374,12 +335,14 @@
       <workItem from="1558660087791" duration="7281000" />
       <workItem from="1558922471836" duration="16517000" />
       <workItem from="1559008626934" duration="14321000" />
-      <workItem from="1559091832829" duration="21849000" />
+      <workItem from="1559091832829" duration="22057000" />
+      <workItem from="1559178542407" duration="4770000" />
+      <workItem from="1559265695239" duration="1508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129136000" />
+    <option name="totallyTimeSpent" value="135622000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -391,10 +354,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14605543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14925373" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -424,38 +387,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Spreadsheet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11625">
-          <caret line="468" column="20" lean-forward="false" selection-start-line="468" selection-start-column="20" selection-end-line="468" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/phpSpreadsheet/write/Helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="62" column="52" lean-forward="false" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
-          <folding>
-            <element signature="e#135#178#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -481,7 +417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2325">
           <caret line="114" column="44" lean-forward="true" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -489,7 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -507,7 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11625">
           <caret line="468" column="20" lean-forward="false" selection-start-line="468" selection-start-column="20" selection-end-line="468" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -539,9 +472,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -549,7 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -577,7 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11625">
           <caret line="468" column="20" lean-forward="false" selection-start-line="468" selection-start-column="20" selection-end-line="468" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,9 +546,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -704,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="25">
-            <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -746,14 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11625">
           <caret line="468" column="20" lean-forward="false" selection-start-line="468" selection-start-column="20" selection-end-line="468" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -761,7 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -769,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2325">
           <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,13 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="144" column="16" lean-forward="false" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/baseExport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -797,23 +697,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/IReader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
+        <state relative-caret-position="450">
           <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Cell/Coordinate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="7550">
           <caret line="303" column="48" lean-forward="false" selection-start-line="303" selection-start-column="27" selection-end-line="303" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/phpSpreadsheet/SHelper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
+        <state relative-caret-position="2200">
           <caret line="94" column="58" lean-forward="false" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
           <folding>
             <element signature="e#6#94#0#PHP" expanded="true" />
@@ -824,7 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/phpSpreadsheet/write/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
+        <state relative-caret-position="4050">
           <caret line="173" column="31" lean-forward="false" selection-start-line="173" selection-start-column="18" selection-end-line="173" selection-end-column="31" />
           <folding>
             <element signature="e#135#178#0#PHP" expanded="true" />
@@ -834,22 +732,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/phpSpreadsheet/read/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="127" column="115" lean-forward="true" selection-start-line="127" selection-start-column="115" selection-end-line="127" selection-end-column="115" />
+        <state relative-caret-position="2950">
+          <caret line="127" column="115" lean-forward="false" selection-start-line="127" selection-start-column="115" selection-end-line="127" selection-end-column="115" />
           <folding>
             <element signature="e#134#179#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/markbaker/matrix/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/baseExport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="425">
+            <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/baseImport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/export.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

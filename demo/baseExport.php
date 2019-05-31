@@ -18,7 +18,7 @@ $data=[
 ];
 
 return SHelper::make('write')
-    ->addTitle('菜场菜品列表')
+    ->addTitle('XX商品列表')
     ->addHeader([
         ['name',20,'商品名称'],
         ['num',15,'数量'],
