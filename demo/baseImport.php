@@ -20,4 +20,3 @@ $list =  SHelper::make('read')
     ])
     ->output();
 
-var_dump($list);
