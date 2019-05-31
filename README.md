@@ -17,7 +17,7 @@ return SHelper::make('write')
     ->setData($data)
     ->output('商品表','xlsx');
 ```
-<img src=""/>
+<img src="https://github.com/awsomeKill/phpSpreadsheet-helper/blob/master/img/export.png"/>
 
 
 ### Import into a specified key-value pair array
