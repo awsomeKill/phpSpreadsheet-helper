@@ -47,8 +47,8 @@ class Helper extends SHelper
         $this->_objSheet = $this->_objSpreadsheet->getActiveSheet();
     }
 
-    public function addFile($file_url){
-        $file_path = $this->downloadFile($file_url);
+    public function addFile($file_url,$upload_temp_path){
+        $file_path = $this->downloadFile($file_url,$upload_temp_path);
         if (empty($file_path) OR !file_exists($file_path)) {
             throw new \Exception('文件不存在!');
         }
@@ -179,15 +179,24 @@ class Helper extends SHelper
         return $this;
     }
 
-    private function downloadFile($url)
+    /**
+     * @param $url
+     * @param string $upload_temp_path 文件上传临时目录
+     * @return string
+     */
+    private function downloadFile($url,$upload_temp_path)
     {
         $type = array_slice(explode('.', $url),-1,1);
         $file_name = date("YmdHis").mt_rand(1000, 9999).'.'.$type[0];
         //创建下载目录
-        if (!file_exists('./uploads/files')) {
-            mkdir('./uploads/files', 0777, true);
+        if (!is_dir($upload_temp_path)) {
+            mkdir($upload_temp_path,0777, true);
         }
-        $file_path='./uploads/files/'.$file_name;
+        $file_path = $upload_temp_path.'/'.$file_name;
+//        if (!file_exists('./uploads/files')) {
+//            mkdir('./uploads/files', 0777, true);
+//        }
+//        $file_path='./uploads/files/'.$file_name;
         $file = file_get_contents($url);
         file_put_contents($file_path,$file);
         return $file_path;

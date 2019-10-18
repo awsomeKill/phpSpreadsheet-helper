@@ -26,4 +26,4 @@ return SHelper::make('write')
         ['price',15,'售价']
     ])
     ->setData($data)
-    ->output('商品表','xlsx');
+    ->output('商品表','csv');
